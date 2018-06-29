@@ -19,8 +19,14 @@ const winningCombinations = [
 handleClick = function (event) {
     var cell = event.target
 
-    if (cell.innerHTML.includes("X") || cell.innerHTML.includes("O")) {
+    if (cell.innerHTML.includes("X")) {
+            cell.className = "X"
       return false;
+    }
+        
+    if(cell.innerHTML.includes("O")) {
+            cell.className = "O"
+            return false;
     }
 
     cell.innerHTML = currentPlayer;
